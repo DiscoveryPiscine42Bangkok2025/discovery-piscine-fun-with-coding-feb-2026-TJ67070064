@@ -30,17 +30,9 @@ body, html {
     top: 50%;
     width: 100%;
     text-align: center;
+    color: aliceblue;
 }
 
-
-.border {
-    background-color: #111;
-    color: #fff;
-    padding: 18px;
-    font-size: 25px;
-    letter-spacing: 10px;
-    text-transform: uppercase;
-}
 
 
 .blackblock {
