@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It's over 9000</title>
+</head>
+<body>
+
+    <input type="text" id="leftMember">
+
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+
+    <input type="text" id="rightMember">
+
+    <input type="submit" id="submitBtn" value="Try me!">
+
+    <script>
+        setInterval(function() {
+            alert('Please, use me...');
+        }, 30000);
+
+        const leftInput = document.getElementById('leftMember');
+        const rightInput = document.getElementById('rightMember');
+        const operatorSelect = document.getElementById('operator');
+        const submitBtn = document.getElementById('submitBtn');
+
+        submitBtn.addEventListener('click', function() {
+            const leftVal = leftInput.value;
+            const rightVal = rightInput.value;
+            const operator = operatorSelect.value;
+
+            if (!isValidInteger(leftVal) || !isValidInteger(rightVal)) {
+                alert('Error :(');
+                return;
+            }
+
+            const l = parseInt(leftVal);
+            const r = parseInt(rightVal);
+            let result = 0;
+
+            if (operator === '+') {
+                result = l + r;
+            } else if (operator === '-') {
+                result = l - r;
+            } else if (operator === '*') {
+                result = l * r;
+            } else if (operator === '/') {
+                
+                if (r === 0) {
+                    over9000();
+                    return;
+                }
+                result = l / r;
+            
+            } else if (operator === '%') {
+                if (r === 0) {
+                    over9000();
+                    return;
+                }
+                result = l % r;
+            }
+            console.log(result);
+            alert(result);
+        });
+
+        function isValidInteger(str) {
+            const reg = /^\d+$/; 
+            return reg.test(str);
+        }
+        function over9000() {
+            console.log("It's over 9000!");
+            alert("It's over 9000!");
+        }
+    </script>
+</body>
+</html>
