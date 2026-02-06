@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+
+        .landing-container {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .profile-card {
+            flex: 1;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+            overflow: hidden;
+            border: none;
+        }
+
+        .card-left {
+            background-color: #ffffff;
+            color: #000000;
+            border-right: 1px solid #eee;
+        }
+
+        .card-right {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        .profile-info {
+            text-align: center;
+            z-index: 2;
+            transition: transform 0.4s ease;
+        }
+
+        .profile-info img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 5px solid currentColor;
+            transition: all 0.4s ease;
+        }
+
+        .profile-info h2 {
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .profile-info p {
+            font-weight: 300;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .view-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 30px;
+            border: 2px solid currentColor;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .profile-card:hover {
+            flex: 1.2;
+        }
+
+        .card-left:hover {
+            background-color: #f8f9fa;
+        }
+
+        .card-right:hover {
+            background-color: #000000;
+        }
+
+        .profile-card:hover .view-btn {
+            background-color: currentColor;
+            color: white;
+        }
+        
+        .card-left:hover .view-btn {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+            border-color: #000000 !important;
+        }
+        .card-right:hover .view-btn {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+            border-color: #ffffff !important;
+        }
+
+        @media (max-width: 768px) {
+            .landing-container {
+                flex-direction: column;
+            }
+            .profile-card:hover {
+                flex: 1.5;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="landing-container">
+        <a href="cv1.html" class="profile-card card-left">
+            <div class="profile-info">
+                <img src="tjeendas.jpg" alt="Tananan">
+                <h2>TANANAN</h2>
+                <p>Web Designer</p>
+                <span class="view-btn">View Profile</span>
+            </div>
+        </a>
+
+        <a href="cv2.html" class="profile-card card-right">
+            <div class="profile-info">
+                <img src="ttongyu.png" alt="THEEPAPAT">
+                <h2>THEEPAPAT</h2>
+                <p>Web Designer</p>
+                <span class="view-btn">View Profile</span>
+            </div>
+        </a>
+    </div>
+
+</body>
+</html>
